@@ -1,0 +1,70 @@
+body
+{
+    margin:0;
+    padding:0;
+}
+header
+{
+    width:100%;
+    min-height:85vh;
+}
+#background
+{
+    z-index: -1;
+    width:100%;
+    height:85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    position: absolute;
+}
+#one
+{
+    display:flex;
+    flex-wrap:wrap;
+    z-index: 1;
+    font-family: 'Princess Sofia', cursive;
+    color:white;
+    font-size:8em;
+    align-items: center;
+    justify-content: center;
+    height:85vh;
+
+}
+.napis
+{
+    flex-basis: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow
+{
+    font-size:4rem;
+    width:2em;
+    height:2em;
+    background-color:orangered;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.arrow:hover
+{
+    transform: scale(1.2);
+}
+#first
+{
+    width:100%;
+    min-height:100vh;
+}
+a{color: white;}
+    a:link {text-decoration: none;
+        color: white;}
+    a:visited {text-decoration: none}
+    a:active {text-decoration: none;
+        color: white;}
+    a:hover {text-decoration: none;
+        color: white;}
