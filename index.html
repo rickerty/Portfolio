@@ -11,8 +11,10 @@
 
 </head>
 <body>
-    
-<header>
+<nav id="navbar">
+    <a id="navlink" href="#header">Up!</a>
+</nav>
+<header id="header">
     <div id="background">
         
     </div>
@@ -42,6 +44,9 @@
         console.log(sprawdzam)
         return sprawdzam;
     })
+    .catch((message)=>{
+        console.log(message)
+    })
 }
 
 test().then(v => {
@@ -50,6 +55,23 @@ test().then(v => {
 
 });
 
+// "Text" div slide in
+function showText(){
+    const navStyle = document.getElementById('navbar').style;
+    const navLink = document.getElementById('navlink').style;
+    const screenTop = window.scrollY;
+    if (screenTop > 20) {
+        navStyle.height = "120px";
+        navStyle.backgroundColor = "white";
+        navLink.color = "black";    }
+    else
+    {
+        navStyle.height = "40px";
+        navStyle.backgroundColor = "";
+        navLink.color = "white";
+    }
+}
+window.addEventListener('scroll', showText);
 </script>
 </body>
 </html>

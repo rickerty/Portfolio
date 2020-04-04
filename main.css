@@ -9,6 +9,19 @@ body
     margin:0;
     padding:0;
 }
+nav
+{
+    position:fixed;
+    top:0;
+    height:40px;
+    width:100%;
+    transition: 0.4s;
+    padding: 20px;
+}
+#navlink
+{
+    color:white;
+}
 header
 {
     width:100%;
@@ -74,6 +87,7 @@ header
 }
 .text
 {
+    visibility: hidden;
     width:50%;
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     background-color:var(--orange-element);
@@ -91,7 +105,10 @@ header
     }
   }
   
-a{color: white;}
+a
+{
+    color: white;
+}
     a:link {text-decoration: none;
         color: white;}
     a:visited {text-decoration: none}
