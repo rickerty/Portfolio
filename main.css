@@ -1,3 +1,9 @@
+
+html
+{
+    scroll-behavior: smooth;
+    --orange-element: #F58A07;
+}    
 body
 {
     margin:0;
@@ -18,18 +24,20 @@ header
     background-position: center;
     filter: brightness(0.5);
     position: absolute;
+    background-attachment: fixed;
 }
 #one
 {
     display:flex;
     flex-wrap:wrap;
     z-index: 1;
-    font-family: 'Princess Sofia', cursive;
+    font-family: 'Amatic SC', cursive;
     color:white;
     font-size:8em;
     align-items: center;
     justify-content: center;
     height:85vh;
+    
 
 }
 .napis
@@ -44,7 +52,7 @@ header
     font-size:4rem;
     width:2em;
     height:2em;
-    background-color:orangered;
+    background-color: var(--orange-element);
     border-radius: 50%;
     display:flex;
     align-items: center;
@@ -59,7 +67,30 @@ header
 {
     width:100%;
     min-height:100vh;
+    background-color: #044B7F;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
+.text
+{
+    width:50%;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    background-color:var(--orange-element);
+}
+@keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
 a{color: white;}
     a:link {text-decoration: none;
         color: white;}
