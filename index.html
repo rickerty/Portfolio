@@ -12,8 +12,14 @@
 </head>
 <body>
 <nav id="navbar">
-    <a  href="#header">Up!</a>
-    <a  href="#first">Więcej o mnie</a>
+    <div>
+        <a id="logo" href="index.html">Robert J.</a>
+    </div>
+    <div>
+        <a  href="#header">Up!</a>
+        <a  href="#first">Więcej o mnie</a>
+        <a href="#second">Moje projekty</a>
+    </div>
 </nav>
 <header id="header">
     <div id="background">
@@ -25,33 +31,61 @@
     </div>
 </header>
 <section id="first">
-    <div class="text">
-        Text
+    <div class="text" id="text">
+        <h1><i class="fas fa-male"></i> Coś o mnie...</h1>
+        <p>
+            Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych.
+        </p>
     </div>
 </section>
-
+<section id="second">
+    <div>
+        <img src="img/computer.jpg">
+    </div>
+    <div>
+        c
+    </div>
+</section>
 <!--Skrypt JS-->
 <script>
-
-
-// "Text" div slide in
-function showText(){
+// "Nav" shrink
+function showNav(){
     const navStyle = document.getElementById('navbar').style;
     const screenTop = window.scrollY;
     if (screenTop > 20) {
         document.getElementById('navbar').classList.add("mystyle");
         navStyle.height = "80px";
-        navStyle.backgroundColor = "white"; 
-
+        navStyle.backgroundColor = "white";
+        document.getElementById('logo').style.visibility = "visible";
     }
     else
     {
         document.getElementById('navbar').classList.remove("mystyle");
         navStyle.height = "40px";
         navStyle.backgroundColor = "";
+        document.getElementById('logo').style.visibility = "hidden";
     }
 }
-window.addEventListener('scroll', showText);
+window.addEventListener('scroll', showNav);
+// Koniec nav shrink
+//"Text" show
+function showText(){
+    const topOfFirst = document.getElementById('first').offsetTop
+    const screenTop = window.scrollY;
+    console.log(topOfFirst-100, screenTop)
+    if ((topOfFirst-100) < screenTop)
+    {
+        document.getElementById('text').style.visibility = "visible";
+        document.getElementById('text').style.animation = "slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+    }
+    else
+    {
+        document.getElementById('text').style.visibility = "hidden"
+        document.getElementById('text').style.animation = "";
+    }
+}
+window.addEventListener('scroll', showText)
+//
 </script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 html
 {
     scroll-behavior: smooth;
@@ -9,16 +10,27 @@ body
     margin:0;
     padding:0;
 }
+a
+{
+    color: white;
+}
+    a:link {text-decoration: none;
+        color: white;}
+    a:visited {text-decoration: none}
+    a:active {text-decoration: none;
+        color: white;}
+    a:hover {text-decoration: none;
+        color: white;}
 nav
 {
     position:fixed;
+    z-index: 1;
     top:0;
     height:40px;
     width:100%;
     transition: 0.4s;
     padding: 20px;
     display:flex;
-    justify-content: flex-end;
     font-family: 'Montserrat', sans-serif;
 }
 nav a
@@ -29,11 +41,42 @@ nav a:hover
 {
     color: var(--orange-element);
     transform:scale(1.1);
+    font-weight:bold;
     transition: 0.4s;
+}
+nav div
+{
+    flex:1;
+}
+nav div:first-child
+{
+    display: flex;
+    justify-content: start;
+}
+#logo
+{
+    visibility:hidden;
+    color: var(--orange-element);
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+}
+#logo::after
+{
+    font-size:0.6em;
+    content: "portfolio";
+}
+#logo a
+{
+    color: var(--orange-element);
+}
+nav div:last-child
+{
+    display: flex;
+    justify-content: flex-end;
 }
 .mystyle a
 {
-    color:black !important;
+    color:black;
     padding-right:40px;
     transition: 0.4s;
 }
@@ -50,7 +93,7 @@ header
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url('https://pixabay.com/get/53e9d6404855b108f5d08460c6283f77163ed9e54e507441732e7ad1904dc4_1280.jpg');
+    background-image: url('img/startup.jpg');
     position: absolute;
     background-attachment: fixed;
 }
@@ -61,7 +104,7 @@ header
     z-index: 1;
     font-family: 'Montserrat', sans-serif;
     color:white;
-    font-size:4em;
+    font-size:6em;
     align-items: center;
     justify-content: center;
     height:85vh;
@@ -74,6 +117,7 @@ header
     display:flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Caveat', cursive;
 }
 .napis::after
 {
@@ -109,8 +153,27 @@ header
 {
     visibility: hidden;
     width:50%;
-    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    padding:10px;
+    border-radius: 7px;
+    transition: 0.4s;
     background-color:var(--orange-element);
+    text-align: justify;
+}
+#second
+{
+    display:flex;
+    min-height:100vh;
+    align-items: stretch;
+}
+#second div
+{
+    flex-grow:1;
+    border: 1px solid black;
+}
+#second div img
+{
+    max-width: 100%;
+    height: auto;
 }
 @keyframes slide-in-left {
     0% {
@@ -124,15 +187,3 @@ header
       opacity: 1;
     }
   }
-  
-a
-{
-    color: white;
-}
-    a:link {text-decoration: none;
-        color: white;}
-    a:visited {text-decoration: none}
-    a:active {text-decoration: none;
-        color: white;}
-    a:hover {text-decoration: none;
-        color: white;}
