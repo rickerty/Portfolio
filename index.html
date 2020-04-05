@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Background</title>
+    <title>Robert J. - portfolio</title>
     <link href="css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    
 
 </head>
 <body>
 <nav id="navbar">
-    <a id="navlink" href="#header">Up!</a>
+    <a  href="#header">Up!</a>
+    <a  href="#first">Więcej o mnie</a>
 </nav>
 <header id="header">
     <div id="background">
         
     </div>
     <div id="one">
-        <div class="napis">Random Background</div>
+        <div class="napis">Robert J.</div>
         <a href="#first"><div class="arrow"><i class="fas fa-arrow-down"></i></div></a>
     </div>
 </header>
@@ -32,43 +33,22 @@
 <!--Skrypt JS-->
 <script>
 
-    function test(){
-    return fetch('https://pixabay.com/api/?key=10893170-7721f110d46845b4f02876428&q=mountains')
-    .then(response => {
-        return response.json()
-    })
-    .then(resp => {
-        let liczba = Math.floor(Math.random() * 10);
-        console.log(liczba)
-        let sprawdzam = resp.hits[liczba].largeImageURL; 
-        console.log(sprawdzam)
-        return sprawdzam;
-    })
-    .catch((message)=>{
-        console.log(message)
-    })
-}
-
-test().then(v => {
-    var header = document.getElementById('background');
-    header.style.backgroundImage = 'linear-gradient(to bottom, rgba(245, 246, 252, 0.9), rgba(2, 43, 58, 0.77)),url("'+v+'")';
-
-});
 
 // "Text" div slide in
 function showText(){
     const navStyle = document.getElementById('navbar').style;
-    const navLink = document.getElementById('navlink').style;
     const screenTop = window.scrollY;
     if (screenTop > 20) {
-        navStyle.height = "120px";
-        navStyle.backgroundColor = "white";
-        navLink.color = "black";    }
+        document.getElementById('navbar').classList.add("mystyle");
+        navStyle.height = "80px";
+        navStyle.backgroundColor = "white"; 
+
+    }
     else
     {
+        document.getElementById('navbar').classList.remove("mystyle");
         navStyle.height = "40px";
         navStyle.backgroundColor = "";
-        navLink.color = "white";
     }
 }
 window.addEventListener('scroll', showText);

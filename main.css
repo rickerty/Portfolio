@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 html
 {
     scroll-behavior: smooth;
@@ -17,10 +17,25 @@ nav
     width:100%;
     transition: 0.4s;
     padding: 20px;
+    display:flex;
+    justify-content: flex-end;
+    font-family: 'Montserrat', sans-serif;
 }
-#navlink
+nav a
 {
-    color:white;
+    padding-right:25px;
+}
+nav a:hover
+{
+    color: var(--orange-element);
+    transform:scale(1.1);
+    transition: 0.4s;
+}
+.mystyle a
+{
+    color:black !important;
+    padding-right:40px;
+    transition: 0.4s;
 }
 header
 {
@@ -35,7 +50,7 @@ header
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.5);
+    background-image: url('https://pixabay.com/get/53e9d6404855b108f5d08460c6283f77163ed9e54e507441732e7ad1904dc4_1280.jpg');
     position: absolute;
     background-attachment: fixed;
 }
@@ -44,9 +59,9 @@ header
     display:flex;
     flex-wrap:wrap;
     z-index: 1;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Montserrat', sans-serif;
     color:white;
-    font-size:8em;
+    font-size:4em;
     align-items: center;
     justify-content: center;
     height:85vh;
@@ -59,6 +74,11 @@ header
     display:flex;
     align-items: center;
     justify-content: center;
+}
+.napis::after
+{
+    font-size:0.3em;
+    content: "portfolio";
 }
 .arrow
 {
