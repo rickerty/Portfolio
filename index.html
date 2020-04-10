@@ -31,11 +31,14 @@
     </div>
 </header>
 <section id="first">
-    <div class="text" id="text">
-        <h1><i class="fas fa-male"></i> Coś o mnie...</h1>
-        <p>
-            Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych.
-        </p>
+    <div class="first-child">
+        <div></div>
+        <div class="text" id="text">
+            <h1><i class="fas fa-male"></i> Coś o mnie...</h1>
+            <p>
+                Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych i rodziny.
+            </p>
+        </div>
     </div>
 </section>
 <section id="second">
@@ -43,7 +46,20 @@
         <img src="img/computer.jpg">
     </div>
     <div>
-        c
+        <div>
+            <h1>Moje umiejętności</h1>
+            <ul>
+                <li>PHP - poziom podstawowy
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Laravel - poziom podstawowy</li>
+                    </ul>
+                </li>
+                <li>HTML - poziom średnio-zaawansowany</li>
+                <li>CSS - poziom podstawowy </li>
+                <li>Java Script - poziom podstawowy</li>
+            </ul>
+        </div>
     </div>
 </section>
 <!--Skrypt JS-->
@@ -76,16 +92,36 @@ function showText(){
     if ((topOfFirst-100) < screenTop)
     {
         document.getElementById('text').style.visibility = "visible";
-        document.getElementById('text').style.animation = "slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+        document.getElementById('text').style.animation = "fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both";
+        document.getElementById('text').style.animationDelay = "0.5s";
+        document.getElementById('skils').style.visibility = "visible";
+        document.getElementById('skils').style.animation = "fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both";
+        document.getElementById('skils').style.animationDelay = "2s";
+    
     }
     else
     {
         document.getElementById('text').style.visibility = "hidden"
         document.getElementById('text').style.animation = "";
+        document.getElementById('skils').style.visibility = "hidden"
+        document.getElementById('skils').style.animation = "";
     }
 }
 window.addEventListener('scroll', showText)
+
+// Pojawianie się elementów w trakcie ładowania
+window.addEventListener('DOMContentLoaded', function(){
+    setTimeout(() => { 
+        document.getElementsByClassName('napis')[0].style.visibility = 'visible';
+        document.getElementsByClassName('napis')[0].style.animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both';
+        }, 1000);
+        setTimeout(() => { 
+            document.getElementsByClassName('arrow')[0].style.visibility = 'visible';
+        document.getElementsByClassName('arrow')[0].style.animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both';
+        }, 1200);
+})
 //
 </script>
+
 </body>
 </html>

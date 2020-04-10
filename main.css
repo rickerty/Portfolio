@@ -83,13 +83,13 @@ nav div:last-child
 header
 {
     width:100%;
-    min-height:85vh;
+    min-height:90vh;
 }
 #background
 {
     z-index: -1;
     width:100%;
-    height:85vh;
+    height:90vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -118,12 +118,23 @@ header
     align-items: center;
     justify-content: center;
     font-family: 'Caveat', cursive;
+    visibility: hidden;
+    animation: showText 0s ease-in 0.5s forwards;
 }
 .napis::after
 {
     font-size:0.3em;
     content: "portfolio";
 }
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
 .arrow
 {
     font-size:4rem;
@@ -135,6 +146,7 @@ header
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    visibility: hidden;
 }
 .arrow:hover
 {
@@ -145,11 +157,39 @@ header
     width:100%;
     min-height:100vh;
     background-color: #044B7F;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    padding: 90px 10px 10px 10px;
+}
+#first div:nth-child(n)
+{
+    display: flex;
+    padding:10px;
 }
 .text
+{
+    visibility: hidden;
+    width:50%;
+    padding:10px;
+    box-sizing: content-box;
+    border-radius: 7px;
+    transition: 0.4s;
+    
+    text-align: justify;
+}
+#text
+{
+    display: block !important;
+}
+.first-child
+{
+    background-image: url('img/developer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.first-child div
+{
+    flex:1;
+}
+.skils
 {
     visibility: hidden;
     width:50%;
@@ -159,6 +199,16 @@ header
     background-color:var(--orange-element);
     text-align: justify;
 }
+#skils
+{
+    display: block !important;
+}
+.picture
+{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+}
 #second
 {
     display:flex;
@@ -167,22 +217,24 @@ header
 }
 #second div
 {
-    flex-grow:1;
-    border: 1px solid black;
+    display:flex;
+    flex:1;
+    align-items: center;
+}
+#second div:first-child
+{
+    background-color: #1c61c0;
 }
 #second div img
 {
-    max-width: 100%;
-    height: auto;
+    width:100%;
 }
 @keyframes slide-in-left {
     0% {
-      -webkit-transform: translateX(-1000px);
               transform: translateX(-1000px);
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateX(0);
               transform: translateX(0);
       opacity: 1;
     }
