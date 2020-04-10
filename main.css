@@ -159,6 +159,10 @@ header
     background-color: #044B7F;
     padding: 90px 10px 10px 10px;
 }
+#first div
+{
+    margin-bottom:10px;
+}
 #first div:nth-child(n)
 {
     display: flex;
@@ -182,6 +186,12 @@ header
 .first-child
 {
     background-image: url('img/developer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.first-childSecond
+{
+    background-image: url('img/skils.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
