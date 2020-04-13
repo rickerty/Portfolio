@@ -31,106 +31,59 @@
     </div>
 </header>
 <section id="first">
-    <div class="first-child">
-        <div></div>
-        <div class="text" id="text">
-            <h1> Coś o mnie...</h1>
+    <div class="container-text">
+        <div class="text-place">
+            <h1><i class="far fa-smile-beam text-primary"></i></h1>
+            <h1>
+                
+                O mnie
+            </h1>
             <p>
-                Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych i rodziny.
+                Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych i rodziny. 
             </p>
         </div>
     </div>
-    <div class="first-childSecond">
-        <div class="text" id="skils">
-            <h1> Coś o mnie...</h1>
+    <div class="container-text">
+        <div class="text-arrow" id="skills">
+            <a href="#skills"><i class="fas fa-chevron-circle-down fa-3x"></i></a>
+        </div>
+    </div>
+    <div class="container-text">
+        <div class="text-place">
+            <h1><i class="far fas fa-cogs text-primary"></i></h1>
+            <h1>
+                
+                Moje umiejętności
+            </h1>
             <p>
-                Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych i rodziny.
+                Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych i rodziny. 
             </p>
         </div>
-        <div></div>
     </div>
 </section>
-<section id="second">
-    <div>
-        <img src="img/computer.jpg">
-    </div>
-    <div>
-        <div>
-            <h1>Moje umiejętności</h1>
-            <ul>
-                <li>PHP - poziom podstawowy
-                    <ul>
-                        <li>MySQL</li>
-                        <li>Laravel - poziom podstawowy</li>
-                    </ul>
-                </li>
-                <li>HTML - poziom średnio-zaawansowany</li>
-                <li>CSS - poziom podstawowy </li>
-                <li>Java Script - poziom podstawowy</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!--Skrypt JS-->
-<script>
-// "Nav" shrink
-function showNav(){
-    const navStyle = document.getElementById('navbar').style;
-    const screenTop = window.scrollY;
-    if (screenTop > 20) {
-        document.getElementById('navbar').classList.add("mystyle");
-        navStyle.height = "80px";
-        navStyle.backgroundColor = "white";
-        document.getElementById('logo').style.visibility = "visible";
-    }
-    else
-    {
-        document.getElementById('navbar').classList.remove("mystyle");
-        navStyle.height = "40px";
-        navStyle.backgroundColor = "";
-        document.getElementById('logo').style.visibility = "hidden";
-    }
-}
-window.addEventListener('scroll', showNav);
-// Koniec nav shrink
-//"Text" show
-function showText(){
-    const topOfFirst = document.getElementById('first').offsetTop
-    const screenTop = window.scrollY;
-    console.log(topOfFirst-100, screenTop)
-    if ((topOfFirst-100) < screenTop)
-    {
-        document.getElementById('text').style.visibility = "visible";
-        document.getElementById('text').style.animation = "fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both";
-        document.getElementById('text').style.animationDelay = "0.5s";
-        document.getElementById('skils').style.visibility = "visible";
-        document.getElementById('skils').style.animation = "fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both";
-        document.getElementById('skils').style.animationDelay = "2s";
-    
-    }
-    else
-    {
-        document.getElementById('text').style.visibility = "hidden"
-        document.getElementById('text').style.animation = "";
-        document.getElementById('skils').style.visibility = "hidden"
-        document.getElementById('skils').style.animation = "";
-    }
-}
-window.addEventListener('scroll', showText)
 
-// Pojawianie się elementów w trakcie ładowania
-window.addEventListener('DOMContentLoaded', function(){
-    setTimeout(() => { 
-        document.getElementsByClassName('napis')[0].style.visibility = 'visible';
-        document.getElementsByClassName('napis')[0].style.animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both';
-        }, 1000);
-        setTimeout(() => { 
-            document.getElementsByClassName('arrow')[0].style.visibility = 'visible';
-        document.getElementsByClassName('arrow')[0].style.animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both';
-        }, 1200);
-})
-//
-</script>
+
+        <div class="text">
+            <div></div>
+            <div>
+                <div class="about">
+                    <h1>O mnie</h1>
+                    <p>
+                        Jestem 30-letnim pracownikiem administracji publicznej. Programowanie traktuję jako hobby i uwielbiam w wolnym czasie zasiadać do komputera. Od kilku lat staram się zagłębiać w technologie webowe. Pomimo braku doświadczenia w komercyjnych projektach niestrudzenie buduje własne aplikacje i proste strony aby poszerzać swoją wiedzę. Kilka z tych projektów znalazło zastosowanie w praktyce i funkcjonuje w niewielkich działalnościach gospodarczych moich znajomych i rodziny. 
+                    </p>
+                    <p>
+                        Moim celem jest zdobywanie jak największego doświadczenia w tworzeniu projektów komercyjnych, nauka nowych technologii oraz wdrażanie się w pracę zespołową. W swojej pracy dużą uwagę przywiązuję do rezponsywności projektów, a także do czytelności i prostoty budowanych aplikacji.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+</section>
+<div id="container"></div>
+<!--Skrypt JS-->
+<script src="main.js"></script>
 
 </body>
 </html>
