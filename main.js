@@ -47,5 +47,16 @@ window.addEventListener('scroll', function(){
         document.getElementsByClassName('container-text')[0].style.animation = ''; 
         document.getElementsByClassName('container-text')[0].style.visibility = 'hidden';
     }
+
+    if (screenTop > topOfFirst + 200)
+    {
+        document.getElementsByClassName('container-text')[2].style.visibility = 'visible';
+        document.getElementsByClassName('container-text')[2].style.animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both';
+    }
+    else
+    {
+        document.getElementsByClassName('container-text')[2].style.animation = ''; 
+        document.getElementsByClassName('container-text')[2].style.visibility = 'hidden';
+    }
 })
 
