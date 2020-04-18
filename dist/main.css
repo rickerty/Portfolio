@@ -241,6 +241,7 @@ header
 .skils-container
 {
     display: flex;
+    padding:25px;
 }
 #php_container
 {

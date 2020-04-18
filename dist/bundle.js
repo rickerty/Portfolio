@@ -1116,43 +1116,7 @@ window.addEventListener('scroll', function(){
     if (screenTop > topOfFirst + 200)
     {
         document.getElementsByClassName('container-text')[2].style.visibility = 'visible';
-        document.getElementsByClassName('container-text')[2].style.animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both';
-        
-        
-        ///--------- Progress Bar ---------
-        var ProgressBar = __webpack_require__(/*! progressbar.js */ "./node_modules/progressbar.js/src/main.js")
-        var bar = new ProgressBar.SemiCircle(php_container, {
-            strokeWidth: 6,
-            color: '#008000',
-            trailColor: '#eee',
-            trailWidth: 1,
-            easing: 'easeInOut',
-            duration: 1400,
-            svgStyle: null,
-            text: {
-            value: '',
-            alignToBottom: false
-            },
-            from: {color: '#008000'},
-            to: {color: '#ED6A5A'},
-            // Set default step function for all animate calls
-            step: (state, bar) => {
-            bar.path.setAttribute('stroke', state.color);
-            var value = Math.round(bar.value() * 100);
-            if (value >= 0 && value < 25) {
-                bar.setText('Junior');
-            } else {
-                bar.setText(value);
-            }
-        
-            bar.text.style.color = state.color;
-            }
-        });
-        bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-        bar.text.style.fontSize = '2rem';
-        
-        bar.animate(0.2);
-    
+        document.getElementsByClassName('container-text')[2].style.animation = 'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both';  
     }
     else
     {
@@ -1160,9 +1124,43 @@ window.addEventListener('scroll', function(){
         document.getElementsByClassName('container-text')[2].style.visibility = 'hidden';
     }
 })
-/////////////////////////
-
-///--------- Progress Bar ---------
+///////////////////////
+const skills = document.getElementById('skills')
+skills.addEventListener('click', function(){
+    ///--------- Progress Bar ---------
+    var ProgressBar = __webpack_require__(/*! progressbar.js */ "./node_modules/progressbar.js/src/main.js")
+    var bar = new ProgressBar.SemiCircle(php_container, {
+        strokeWidth: 6,
+        color: '#008000',
+        trailColor: '#eee',
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        svgStyle: null,
+        text: {
+        value: '',
+        alignToBottom: false
+        },
+        from: {color: '#008000'},
+        to: {color: '#ED6A5A'},
+        // Set default step function for all animate calls
+        step: (state, bar) => {
+        bar.path.setAttribute('stroke', state.color);
+        var value = Math.round(bar.value() * 100);
+        if (value >= 0 && value < 25) {
+            bar.setText('Junior');
+        } else {
+            bar.setText(value);
+        }
+    
+        bar.text.style.color = state.color;
+        }
+    });
+    bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar.text.style.fontSize = '2rem';
+    
+    bar.animate(0.2);
+})
 
 
 
