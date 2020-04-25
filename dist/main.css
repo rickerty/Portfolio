@@ -237,8 +237,12 @@ header
     animation-iteration-count: infinite;
     min-height: 150px;
 }
-
-.skils-container
+.skills-manage
+{
+    display:flex;
+    padding:10px;
+}
+.skill-container
 {
     display: flex;
     padding:25px;
@@ -248,7 +252,11 @@ header
     width:200px;
     height:200px;
 }
-
+#js_container
+{
+    width:200px;
+    height:200px;
+}
 .about
 {
     text-align: justify;
