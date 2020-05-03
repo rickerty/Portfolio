@@ -7,6 +7,7 @@
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     
 
 </head>
@@ -49,29 +50,70 @@
         </div>
     </div>
     <div class="container-text">
-        <div class="text-place">
+        <div class="text-place mb-5">
             <h1><i class="far fas fa-cogs text-primary"></i></h1>
             <h1>
                 Moje umiejętności
             </h1>
-            <div class="skills-manage">
-                <div class="skill-container">
-                    <div>PHP</div>
-                    <div id="php_container"></div>
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-3"><i title="PHP 7 "class="fab fa-php fa-3x text-primary"></i></div>
+                    <div class="col-9" id="php_container"></div>
                 </div>
-                <div class="skill-container">
-                    <div>Java Script</div>
-                    <div id="js_container"></div>
+                <div class="row p-4">
+                    <div class="col-3"><i title="Java Script" class="fab fa-js fa-3x text-primary"></i></div>
+                    <div class="col-9" id="js_container"></div>
+                </div>
+                <div class="row p-4">
+                    <div class="col-3"><i title="CSS 3" class="fab fa-css3-alt fa-3x text-primary"></i></div>
+                    <div class="col-9" id="css_container"></div>
+                </div>
+
+                <div class="row p-4">
+                    <div class="col text-center">
+                        <i title="wordpress" class="fab fa-wordpress fa-3x text-primary"></i>
+                    </div>
+                    <div class="col text-center">
+                        <i title="npm" class="fab fa-npm fa-3x text-primary"></i>
+                    </div>
+                    <div class="col text-center">
+                        <i title="Laravel"class="fab fa-laravel fa-3x text-primary"></i>
+                    </div>
+                    <div class="col text-center">
+                        <i title="HTML 5" class="fab fa-html5 fa-3x text-primary"></i>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     </div>
 </section>
 <section id="second">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            1 of 3
+          </div>
+          <div class="col-6">
+            2 of 3 (wider)
+          </div>
+          <div class="col">
+            3 of 3
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            1 of 3
+          </div>
 
+          <div class="col-4">
+            3 of 3
+          </div>
+        </div>
+      </div>
 </section>
 <!--Skrypt JS-->
 <script src="bundle.js"></script>
+
 
 </body>
 </html>

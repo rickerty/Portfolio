@@ -239,7 +239,7 @@ header
 }
 .skills-manage
 {
-    display:flex;
+    display:block;
     padding:10px;
 }
 .skill-container
@@ -247,15 +247,39 @@ header
     display: flex;
     padding:25px;
 }
+.pasek_napis
+{
+    padding:10px;
+}
 #php_container
 {
-    width:200px;
-    height:200px;
+    width:80%;
+    height: 8px;
+    position: relative;
 }
 #js_container
 {
-    width:200px;
-    height:200px;
+    width:80%;
+    height:8px;
+    position: relative;
+}
+#css_container
+{
+    width:80%;
+    height:8px;
+    position: relative;
+}
+#laravel_container
+{
+    width:80%;
+    height:8px;
+    position: relative;
+}
+#npm_container
+{
+    width:80%;
+    height:8px;
+    position: relative;
 }
 .about
 {

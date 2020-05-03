@@ -18,10 +18,16 @@
   },
   "homepage": "https://github.com/rickerty/Portfolio#readme",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
+    "popper.js": "^1.16.1",
     "progressbar.js": "^1.1.0"
   },
   "devDependencies": {
+    "sass-loader": "^8.0.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   }

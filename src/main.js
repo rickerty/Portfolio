@@ -1,3 +1,9 @@
+import './scss/style.scss';
+require('bootstrap')
+var ProgressBar = require('progressbar.js')
+var $ = require( "jquery" );
+
+
 // "Nav" shrink
 function showNav(){
     const navStyle = document.getElementById('navbar').style;
@@ -61,75 +67,146 @@ window.addEventListener('scroll', function(){
         if (number < 1)
         {
             number += 1;
-            console.log(number)
         ///--------- Progress  PHP Bar ---------
-        var ProgressBar = require('progressbar.js')
-        var bar = new ProgressBar.SemiCircle(php_container, {
-            strokeWidth: 6,
-            color: '#008000',
+        var bar = new ProgressBar.Line(php_container, {
+            strokeWidth: 4,
+            easing: 'easeInOut',
+            duration: 600,
+            color: '#49D49D',
             trailColor: '#eee',
             trailWidth: 1,
-            easing: 'easeInOut',
-            duration: 1400,
-            svgStyle: null,
+            svgStyle: {width: '100%', height: '100%'},
             text: {
-            value: '',
-            alignToBottom: false
+              style: {
+                color: '#999',
+                position: 'absolute',
+                right: '50%',
+                top: '20px',
+                padding: 0,
+                margin: 0,
+                transform: null
+              },
+              autoStyleContainer: false
             },
-            from: {color: '#008000'},
-            to: {color: '#ED6A5A'},
-            // Set default step function for all animate calls
             step: (state, bar) => {
-            bar.path.setAttribute('stroke', state.color);
-            var value = Math.round(bar.value() * 100);
-            if (value >= 0 && value < 25) {
-                bar.setText('Junior');
-            } else {
-                bar.setText(value);
+              bar.setText('Junior');
             }
-        
-            bar.text.style.color = state.color;
-            }
-        });
-        bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-        bar.text.style.fontSize = '2rem';
-        
-        bar.animate(0.2);
+          });
+          
+          bar.animate(0.3);
         
        
         ///--------- Progress  JS Bar ---------
-        var ProgressBar = require('progressbar.js')
-        var bar = new ProgressBar.SemiCircle(js_container, {
-            strokeWidth: 6,
-            color: '#008000',
+        var barjs = new ProgressBar.Line(js_container, {
+            strokeWidth: 4,
+            easing: 'easeInOut',
+            duration: 1000,
+            color: '#49D49D',
             trailColor: '#eee',
             trailWidth: 1,
+            svgStyle: {width: '100%', height: '100%'},
+            text: {
+                style: {
+                    color: '#999',
+                    position: 'absolute',
+                    right: '50%',
+                    top: '20px',
+                    padding: 0,
+                    margin: 0,
+                    transform: null
+              },
+              autoStyleContainer: false
+            },
+            step: (state, bar) => {
+                bar.setText('Junior');
+            }
+          });
+          
+          barjs.animate(0.3);
+        ///--------- Progress CSS Bar ---------
+        var barcss = new ProgressBar.Line(css_container, {
+            strokeWidth: 4,
             easing: 'easeInOut',
             duration: 1400,
-            svgStyle: null,
+            color: '#49D49D',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: {width: '100%', height: '100%'},
             text: {
-            value: '',
-            alignToBottom: false
+                style: {
+                    color: '#999',
+                    position: 'absolute',
+                    right: '50%',
+                    top: '20px',
+                    padding: 0,
+                    margin: 0,
+                    transform: null
+              },
+              autoStyleContainer: false
             },
-            from: {color: '#008000'},
-            to: {color: '#ED6A5A'},
-            // Set default step function for all animate calls
             step: (state, bar) => {
-            bar.path.setAttribute('stroke', state.color);
-            var value = Math.round(bar.value() * 100);
-            if (value >= 0 && value < 25) {
                 bar.setText('Junior');
-            } else {
-                bar.setText(value);
             }
-        
-            bar.text.style.color = state.color;
+          });
+          
+          barcss.animate(0.3);
+
+           ///--------- Progress Laravel Bar ---------
+        var barlaravel = new ProgressBar.Line(laravel_container, {
+            strokeWidth: 4,
+            easing: 'easeInOut',
+            duration: 1800,
+            color: '#49D49D',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: {width: '100%', height: '100%'},
+            text: {
+                style: {
+                    color: '#999',
+                    position: 'absolute',
+                    right: '50%',
+                    top: '20px',
+                    padding: 0,
+                    margin: 0,
+                    transform: null,
+              },
+              autoStyleContainer: false
+            },
+            step: (state, bar) => {
+                bar.setText('Junior');
             }
-        });
-        bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-        bar.text.style.fontSize = '2rem';
-        
-        bar.animate(0.2);
+          });
+          
+          barlaravel.animate(0.3);
+          
+           ///--------- Progress NPM Bar ---------
+           var barnpm = new ProgressBar.Line(npm_container, {
+            strokeWidth: 4,
+            easing: 'easeInOut',
+            duration: 2200,
+            color: '#49D49D',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: {width: '100%', height: '100%'},
+            text: {
+                style: {
+                    color: '#999',
+                    position: 'absolute',
+                    right: '50%',
+                    top: '20px',
+                    padding: 0,
+                    margin: 0,
+                    transform: null,
+              },
+              autoStyleContainer: false
+            },
+            step: (state, bar) => {
+                bar.setText('Junior');
+            }
+          });
+          
+          barnpm.animate(0.3);
+          
         }
     }
     else
@@ -137,9 +214,7 @@ window.addEventListener('scroll', function(){
         document.getElementsByClassName('container-text')[2].style.animation = ''; 
         document.getElementsByClassName('container-text')[2].style.visibility = 'hidden';
     }
-})
-/////////////////////////
 
-///--------- Progress Bar ---------
+})
 
 
